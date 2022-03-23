@@ -1,0 +1,39 @@
+# Program which displays a menu asks for "a", "f" ,"l" and "q" options for adding movies,finding a movie, list all the movies.
+# Movie should contain Title,Director and year as details.
+
+MENU_PROMPT = "\nEnter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie by title, or 'q' to quit: "
+movies = []
+
+def append():
+    title = input("Enter the movie title: ")
+    director = input("Enter the movie director: ")
+    year = input("Enter the movie release year: ")
+    movies.append({
+        'title': title,
+        'director': director,
+        'year': year
+    })
+
+def list():
+    for movie in movies:
+        print(movie)
+
+def find():
+    mov = input("Enter movie u r looking for\n")
+    for movie in movies:
+         if movie["title"] == mov:
+            print(f"title : {movie['title']}, director : {movie['director']}, year: {movie['year']}\n")
+
+# And another function here for the user menu
+selection = input(MENU_PROMPT)
+while selection != 'q':
+    if selection == "a":
+        append()
+    elif selection == "l":
+        list()
+    elif selection == "f":
+        find()
+    else:
+        print('Unknown command. Please try again.')
+
+    selection = input(MENU_PROMPT)
