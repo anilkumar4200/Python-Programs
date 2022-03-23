@@ -1,0 +1,8 @@
+# Python program to add two numbers.
+
+num1 = int(input("Enter first number for sum"))
+num2 = int(input("Enter second number for sum"))
+
+sum = num1 + num2
+
+print("sum of {0}  and {1} equal {2}".format(num1,num2,sum))
