@@ -1,0 +1,22 @@
+# Python Program for factorial of a number.
+
+#Recursive method
+
+def factorial(val):
+    return 1 if (val == 1 or val ==0) else val * factorial(val-1);
+
+
+num = int(input("Enter number to find factorial"))
+
+print(factorial(num))
+
+
+#Using import math function
+
+import math
+
+def fact(val):
+    return (math.factorial(val))
+
+num =5
+print(fact(num))
